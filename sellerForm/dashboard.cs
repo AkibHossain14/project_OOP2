@@ -14,7 +14,7 @@ namespace sellerForm
     public partial class dashboard : Form
     {
 
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
         int  id;
 
         public dashboard( int  i )
