@@ -1,0 +1,214 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerform\\newproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\newproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerform\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|c:\\users\\botwithrtx\\source\\repos\\project_oop2\\sellerform\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerform\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|c:\\users\\botwithrtx\\source\\repos\\project_oop2\\sellerform\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|c:\\users\\botwithrtx\\source\\repos\\project_oop2\\sellerform\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\resetpass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerform\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerform\\newproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\newproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerform\\productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{861901F7-375E-4AD3-A621-FD59ECDF7D0B}|sellerForm\\sellerForm.csproj|solutionrelative:sellerform\\productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NewProduct.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\NewProduct.cs",
+              "RelativeDocumentMoniker": "sellerForm\\NewProduct.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\NewProduct.cs [Design]",
+              "RelativeToolTip": "sellerForm\\NewProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T08:12:45.084Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\dashboard.cs",
+              "RelativeDocumentMoniker": "sellerForm\\dashboard.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\dashboard.cs",
+              "RelativeToolTip": "sellerForm\\dashboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T05:51:50.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SignUP.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\SignUP.cs",
+              "RelativeDocumentMoniker": "sellerForm\\SignUP.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\SignUP.cs [Design]",
+              "RelativeToolTip": "sellerForm\\SignUP.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T16:52:20.097Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NewProduct.cs",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\NewProduct.cs",
+              "RelativeDocumentMoniker": "sellerForm\\NewProduct.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\NewProduct.cs",
+              "RelativeToolTip": "sellerForm\\NewProduct.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAUwH4AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T05:55:31.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductInfo.cs",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\ProductInfo.cs",
+              "RelativeDocumentMoniker": "sellerForm\\ProductInfo.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\ProductInfo.cs",
+              "RelativeToolTip": "sellerForm\\ProductInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T06:04:23.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\dashboard.cs",
+              "RelativeDocumentMoniker": "sellerForm\\dashboard.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\dashboard.cs [Design]",
+              "RelativeToolTip": "sellerForm\\dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T10:26:14.131Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SignUP.cs",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\SignUP.cs",
+              "RelativeDocumentMoniker": "sellerForm\\SignUP.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\SignUP.cs",
+              "RelativeToolTip": "sellerForm\\SignUP.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowEQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T19:23:58.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\Form1.cs",
+              "RelativeDocumentMoniker": "sellerForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\Form1.cs",
+              "RelativeToolTip": "sellerForm\\Form1.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwCMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T06:14:03.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\Form1.cs",
+              "RelativeDocumentMoniker": "sellerForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\Form1.cs [Design]",
+              "RelativeToolTip": "sellerForm\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T10:27:08.594Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResetPass.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\ResetPass.cs",
+              "RelativeDocumentMoniker": "sellerForm\\ResetPass.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\ResetPass.cs [Design]",
+              "RelativeToolTip": "sellerForm\\ResetPass.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T14:11:48.07Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPass.cs",
+              "DocumentMoniker": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\ResetPass.cs",
+              "RelativeDocumentMoniker": "sellerForm\\ResetPass.cs",
+              "ToolTip": "C:\\Users\\BoTWitHRTX\\source\\repos\\project_OOP2\\sellerForm\\ResetPass.cs",
+              "RelativeToolTip": "sellerForm\\ResetPass.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T14:17:52.552Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -200,3 +200,4 @@ C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.cs
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.csproj.Up2Date
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.exe
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.pdb
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.ResetPass.resources

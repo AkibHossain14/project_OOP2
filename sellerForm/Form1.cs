@@ -168,6 +168,12 @@ namespace sellerForm
             }
         }
 
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            ResetPass r1 = new ResetPass();
+            r1.Show();
+        }
     }
 }
 
