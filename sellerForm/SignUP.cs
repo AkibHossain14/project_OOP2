@@ -65,28 +65,42 @@ namespace sellerForm
         {
             this.Hide();
 
-            string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-            string name = txtSellerName.Text.Trim();
+            string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+            //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+            
             string userName = txtUserName.Text.Trim();
+            string phone = txtPhone.Text.Trim();
+            string email = txtEmail.Text.Trim();
             string password= txtPass.Text.Trim();
-            string phone  = txtPhone.Text.Trim();
+            string confirmPassword = txtConfirmPass.Text.Trim();
 
-            var fields = new Dictionary<string, string>
-{                    { "Name", name },
-                {"userName", userName } ,
-                       { "Password", password },
-                       { "Phone", phone }
-                         
-};
 
-            var missingField = fields.FirstOrDefault(f => string.IsNullOrWhiteSpace(f.Value));
-
-            if (!string.IsNullOrEmpty(missingField.Key))
+            if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(email) ||
+             string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmPassword))
             {
-                MessageBox.Show($"{missingField.Key} must be filled out.",
-                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Password Must be same!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (phone.Length != 11)
+            {
+                MessageBox.Show("Phone number should cotain 11 numbers!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (password.Length < 4 || password.Length > 8)
+            {
+                MessageBox.Show("Passwrod should contain 4-8 charecters!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             if (!long.TryParse(phone, out long parsedPhone))
             {
                 MessageBox.Show("Phone number must contain only digits.",
@@ -94,18 +108,17 @@ namespace sellerForm
                 return;
             }
 
-            string query = @"INSERT INTO Seller (sellerName, username, password, phone) 
-                 VALUES (@sellerName, @username, @password, @phone)";
+            string query = @"INSERT INTO Seller ( userName, password, phone, email) 
+                 VALUES ( @userName, @password, @phone, @email)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@username", userName);
-                command.Parameters.AddWithValue("@sellerName", name);
-               
                 command.Parameters.AddWithValue("@password", password);
                 command.Parameters.AddWithValue("@phone", phone);
-                
+                command.Parameters.AddWithValue("@email", email);
+
 
                 connection.Open();
                 int rowsAffected = command.ExecuteNonQuery();
@@ -143,6 +156,11 @@ namespace sellerForm
         }
 
         private void SignUP_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

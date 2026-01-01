@@ -57,20 +57,21 @@ namespace sellerForm
             if (!ValidateLoginFields())
                 return;
 
-            string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+            string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+            //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
 
             string username = txtUser.Text.Trim();
             string password = txtPass.Text.Trim();
 
             const string loginSql = @"SELECT COUNT(*) 
                               FROM Seller 
-                              WHERE username = @username AND [password] = @password";
+                              WHERE userName = @userName AND [password] = @password";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(loginSql, con))
             {
                 // Prefer explicit parameter types (less surprises than AddWithValue)
-                cmd.Parameters.Add("@username", SqlDbType.NVarChar, 100).Value = username;
+                cmd.Parameters.Add("@userName", SqlDbType.NVarChar, 100).Value = username;
                 cmd.Parameters.Add("@password", SqlDbType.NVarChar, 100).Value = password;
 
                 try
@@ -87,11 +88,11 @@ namespace sellerForm
                         // Fetch the actual sellerID now
                         const string idSql = @"SELECT sellerID 
                                        FROM Seller 
-                                       WHERE username = @username AND [password] = @password";
+                                       WHERE userName = @userName AND [password] = @password";
 
                         using (SqlCommand idCmd = new SqlCommand(idSql, con))
                         {
-                            idCmd.Parameters.Add("@username", SqlDbType.NVarChar, 100).Value = username;
+                            idCmd.Parameters.Add("@userName", SqlDbType.NVarChar, 100).Value = username;
                             idCmd.Parameters.Add("@password", SqlDbType.NVarChar, 100).Value = password;
 
                             object result = idCmd.ExecuteScalar();
