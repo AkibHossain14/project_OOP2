@@ -201,3 +201,4 @@ C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.cs
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.exe
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.pdb
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.ResetPass.resources
+D:\akib\project\sellerForm\sellerForm\obj\Debug\sellerForm.ResetPass.resources
