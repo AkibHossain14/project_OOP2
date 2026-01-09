@@ -22,9 +22,6 @@ namespace sellerForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close(); 
-            dashboard d1= new dashboard(id);
-            d1.Show();
 
         }
 
