@@ -45,7 +45,9 @@ namespace sellerForm
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
+            Form f2 = new Form1();
+            f2.Show();
         }
     }
 }
