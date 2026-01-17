@@ -196,6 +196,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2Dashboard.Designer.cs">
+      <DependentUpon>Form2Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2ResetPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2Dashboard.resx">
+      <DependentUpon>Form2Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2ResetPass.resx">
       <DependentUpon>Form2ResetPass.cs</DependentUpon>
