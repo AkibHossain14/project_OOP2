@@ -202,3 +202,5 @@ C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.ex
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.pdb
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.ResetPass.resources
 D:\akib\project\sellerForm\sellerForm\obj\Debug\sellerForm.ResetPass.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.AddProductAuction.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.AuctionProductList.resources

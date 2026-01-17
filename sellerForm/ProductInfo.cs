@@ -162,7 +162,7 @@ namespace sellerForm
                     try
                     {
                         newImageData = File.ReadAllBytes(filePath);
-                        label9.Text = filePath;
+                        label12.Text = filePath;
                         pictureBox1.Image = Image.FromFile(filePath);
                         MessageBox.Show("New Image uploaded successfully.");
                     }
@@ -248,7 +248,7 @@ namespace sellerForm
         {
             int itemID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DialogResult result = MessageBox.Show(
-            "Are you sure you want to delete this profile?",
+            "Are you sure you want to delete this product?",
             "Confirm Deletion",
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Warning

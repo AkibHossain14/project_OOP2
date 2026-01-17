@@ -49,5 +49,19 @@ namespace sellerForm
             Form f2 = new Form1();
             f2.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddProductAuction a = new AddProductAuction(id);
+            a.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AuctionProductList a1 = new AuctionProductList(id);
+            a1.Show();
+        }
     }
 }
