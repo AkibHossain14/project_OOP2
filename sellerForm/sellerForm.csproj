@@ -166,6 +166,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductAuction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProductAuction.Designer.cs">
+      <DependentUpon>AddProductAuction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionProductList.Designer.cs">
+      <DependentUpon>AuctionProductList.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +216,12 @@
     <Compile Include="SignUP.Designer.cs">
       <DependentUpon>SignUP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddProductAuction.resx">
+      <DependentUpon>AddProductAuction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionProductList.resx">
+      <DependentUpon>AuctionProductList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
