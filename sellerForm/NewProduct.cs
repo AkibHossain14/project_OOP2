@@ -16,8 +16,8 @@ namespace sellerForm
         private readonly int id;
         byte[] imageData;
 
-        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
 
         public NewProduct(int i)
         {
@@ -144,7 +144,7 @@ namespace sellerForm
             }
 
 
-            string query = "INSERT INTO NormalProductList (itemname, category, brand, description, price, image, sellerID) "+
+            string query = "INSERT INTO NormalProductList (itemName, category, brand, description, price, image, sellerID) "+
                            "VALUES (@itemName, @category, @brand, @description, @price, @image, @iD)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,143 +16,153 @@ namespace sellerForm
 {
     public partial class ProductInfo : Form
     {
-        byte[] newImageData;
+        private byte[] newImageData;          // holds current image (from DB or newly selected)
+        private bool imageChanged = false;    // true only if user selected a new image via OpenFileDialog
         private readonly int id;
-        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
 
-        public ProductInfo(int  i)
+        // string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        private readonly string connectionString =
+            "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+
+        public ProductInfo(int i)
         {
             id = i;
             InitializeComponent();
-            string[] categories = new string[12];
-            categories[0] = "Others";
-            categories[1] = "Electronics";
-            categories[2] = "Fashion & Clothing";
-            categories[3] = "Home & Living";
-            categories[4] = "Books & Stationery";
-            categories[5] = "Computer Accessories";
-            categories[6] = "Gaming";
-            categories[7] = "Beauty & Personal Care";
-            categories[8] = "Food & Grocery";
-            categories[9] = "Sports & Outdoor";
-            categories[10] = "Vehicles & Accessories";
-            categories[11] = "Toys & Baby Products";
+
+            // Use plain '&' for display (remove HTML entities)
+            string[] categories =
+            {
+                "Others",
+                "Electronics",
+                "Fashion & Clothing",
+                "Home & Living",
+                "Books & Stationery",
+                "Computer Accessories",
+                "Gaming",
+                "Beauty & Personal Care",
+                "Food & Grocery",
+                "Sports & Outdoor",
+                "Vehicles & Accessories",
+                "Toys & Baby Products"
+            };
             comboBox1.DataSource = categories;
+
             showlist();
         }
 
         public void showlist()
         {
-            string query = "SELECT itemID as ID, itemName as Name, category as Category,brand as Brand,price as Price " +
-                           "FROM NormalProductList WHERE sellerID = @id";
-            using (SqlConnection con = new SqlConnection(connectionString))
+            string query =
+                "SELECT itemID AS ID, itemName AS Name, category AS Category, brand AS Brand, price AS Price " +
+                "FROM NormalProductList WHERE sellerID = @id";
+
+            using (var con = new SqlConnection(connectionString))
+            using (var command = new SqlCommand(query, con))
             {
-                using (SqlCommand command = new SqlCommand(query, con))
+                command.Parameters.AddWithValue("@id", id);
+                con.Open();
+                using (var reader = command.ExecuteReader())
                 {
-                    command.Parameters.AddWithValue("@id", id);
-                    con.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-                    DataTable dataTable = new DataTable();
+                    var dataTable = new DataTable();
                     dataTable.Load(reader);
                     dataGridView1.DataSource = dataTable;
                 }
             }
         }
 
-        
-
-
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close(); 
-            dashboard d1= new dashboard(id);
+            this.Close();
+            dashboard d1 = new dashboard(id);
             d1.Show();
-
         }
 
         private void ProductInfo_Load(object sender, EventArgs e)
         {
             showID.Text = id.ToString();
             showID.ReadOnly = true;
-
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            // not used
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string itemName;
-            double price;
+            if (dataGridView1.CurrentRow == null || dataGridView1.CurrentRow.Index < 0)
+                return;
+
             int itemID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            int sellerID = id;
-            string category = "";
-            string brand = "";
-            string description = "";
 
-            string query1 = "SELECT itemName FROM NormalProductList WHERE itemID = @itemID";
-            string query2 = "SELECT price FROM NormalProductList WHERE itemID = @itemID";
-            string query3 = "SELECT image FROM NormalProductList WHERE itemID = @itemID";
-            string query4 = "SELECT category FROM NormalProductList WHERE itemID = @itemID";
-            string query5 = "SELECT brand FROM NormalProductList WHERE itemID = @itemID";
-            string query6 = "SELECT description FROM NormalProductList WHERE itemID = @itemID";
+            string query =
+                @"SELECT itemName, price, image, category, brand, description 
+                  FROM NormalProductList 
+                  WHERE itemID = @itemID;";
 
+            string itemName = string.Empty;
+            decimal price = 0m;
+            string category = string.Empty;
+            string brand = string.Empty;
+            string description = string.Empty;
+            byte[] imageBytes = null;
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (var con = new SqlConnection(connectionString))
+            using (var cmd = new SqlCommand(query, con))
             {
+                cmd.Parameters.AddWithValue("@itemID", itemID);
                 con.Open();
-                using (SqlCommand command1 = new SqlCommand(query1, con))
+                using (var r = cmd.ExecuteReader())
                 {
-                    command1.Parameters.AddWithValue("@itemID", itemID);
-                    itemName = (string)command1.ExecuteScalar();
-                }
-                using (SqlCommand command2 = new SqlCommand(query2, con))
-                {
-                    command2.Parameters.AddWithValue("@itemID", itemID);
-                    price = (double)command2.ExecuteScalar();
-                }
-                using (SqlCommand command3 = new SqlCommand(query3, con))
-                {
-                    command3.Parameters.AddWithValue("@itemID", itemID);
-                    newImageData = (byte[])command3.ExecuteScalar();
-                }
-                using (SqlCommand command4 = new SqlCommand(query4, con))
-                {
-                    command4.Parameters.AddWithValue("@itemID", itemID);
-                    category = (string)command4.ExecuteScalar();
-                }
-                using (SqlCommand command5 = new SqlCommand(query5, con))
-                {
-                    command5.Parameters.AddWithValue("@itemID", itemID);
-                    brand = (string)command5.ExecuteScalar();
-                }
-                using (SqlCommand command6 = new SqlCommand(query6, con))
-                {
-                    command6.Parameters.AddWithValue("@itemID", itemID);
-                    description = (string)command6.ExecuteScalar();
+                    if (r.Read())
+                    {
+                        itemName = r["itemName"] as string ?? string.Empty;
+
+                        // price could be float/double/decimal in DB; convert robustly
+                        object priceObj = r["price"];
+                        if (priceObj != DBNull.Value)
+                        {
+                            // Convert to decimal safely
+                            price = Convert.ToDecimal(priceObj, CultureInfo.InvariantCulture);
+                        }
+
+                        category = r["category"] as string ?? string.Empty;
+                        brand = r["brand"] as string ?? string.Empty;
+                        description = r["description"] as string ?? string.Empty;
+
+                        if (r["image"] != DBNull.Value)
+                            imageBytes = (byte[])r["image"];
+                    }
                 }
             }
 
+            // Fill UI
             textBox1.Text = itemName;
-            textBox2.Text = price.ToString();
+            textBox2.Text = price.ToString("0.##", CultureInfo.InvariantCulture);
             richTextBox1.Text = description;
             textBox3.Text = brand;
             comboBox1.Text = category;
+
+            // Load picture if available
+            newImageData = imageBytes; // keep what's currently in DB
+            imageChanged = false;      // user hasn't picked a new image yet
+
             if (newImageData != null)
             {
-                using (MemoryStream ms = new MemoryStream(newImageData))
+                using (var ms = new MemoryStream(newImageData))
                 {
                     pictureBox1.Image = Image.FromStream(ms);
                 }
+            }
+            else
+            {
+                pictureBox1.Image = null;
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            using (var openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.InitialDirectory = "c:\\";
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
@@ -162,6 +173,7 @@ namespace sellerForm
                     try
                     {
                         newImageData = File.ReadAllBytes(filePath);
+                        imageChanged = true; // mark that user selected a new image
                         label12.Text = filePath;
                         pictureBox1.Image = Image.FromFile(filePath);
                         MessageBox.Show("New Image uploaded successfully.");
@@ -176,18 +188,25 @@ namespace sellerForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int sellerId = id;
+            if (dataGridView1.CurrentRow == null || dataGridView1.CurrentRow.Index < 0)
+            {
+                MessageBox.Show("Please select a product from the list first.", "Update", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return;
+            }
+
             int itemID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
             string newItemName = textBox1.Text.Trim();
             string newPriceText = textBox2.Text.Trim();
             string newDescription = richTextBox1.Text.Trim();
             string newCategory = comboBox1.Text.Trim();
             string newBrand = textBox3.Text.Trim();
 
-
+            // Validate required fields
             var fields = new Dictionary<string, string>
             {
-                { "itemname", newItemName },
+                { "itemName", newItemName },
                 { "price", newPriceText },
                 { "description", newDescription },
                 { "category", newCategory },
@@ -201,7 +220,6 @@ namespace sellerForm
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
 
             if (!decimal.TryParse(newPriceText, NumberStyles.Number, CultureInfo.InvariantCulture, out decimal price))
             {
@@ -217,26 +235,55 @@ namespace sellerForm
                 return;
             }
 
+            // ---- Option A: only update image if the user selected a new one ----
+            bool hasNewImage = imageChanged && newImageData != null && newImageData.Length > 0;
 
-            string query = "UPDATE NormalProductList SET itemName = @itemName, category = @category, brand = @brand, " +
-                           "description = @description, price = @price, image = @image WHERE itemID = @id";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            var setParts = new List<string>
             {
-                using (SqlCommand command = new SqlCommand(query, connection))
+                "itemName = @itemName",
+                "category = @category",
+                "brand = @brand",
+                "description = @description",
+                "price = @price"
+            };
+            if (hasNewImage)
+                setParts.Add("image = @image");
+
+            string query = $@"
+                UPDATE NormalProductList
+                SET {string.Join(", ", setParts)}
+                WHERE itemID = @id;";
+
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@itemName", newItemName);
+                command.Parameters.AddWithValue("@category", newCategory);
+                command.Parameters.AddWithValue("@brand", newBrand);
+                command.Parameters.AddWithValue("@description", newDescription);
+
+                // Be explicit for money: DECIMAL param (DB will convert to float if your column is float)
+                var priceParam = command.Parameters.Add("@price", SqlDbType.Decimal);
+                priceParam.Precision = 18;
+                priceParam.Scale = 2;
+                priceParam.Value = price;
+
+                command.Parameters.AddWithValue("@id", itemID);
+
+                if (hasNewImage)
                 {
-                    command.Parameters.AddWithValue("@itemName", newItemName);
-                    command.Parameters.AddWithValue("@category", newCategory);
-                    command.Parameters.AddWithValue("@brand", newBrand);
-                    command.Parameters.AddWithValue("@description", newDescription);
-                    command.Parameters.AddWithValue("@price", price);
-                    command.Parameters.AddWithValue("@image", newImageData);
-                    command.Parameters.AddWithValue("@id", itemID);
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                    command.Parameters.Add("@image", SqlDbType.VarBinary, -1).Value = newImageData;
                 }
+
+                connection.Open();
+                command.ExecuteNonQuery();
             }
-            MessageBox.Show("Your Product Data UPDATED successfully.");
+
+            MessageBox.Show("Your Product Data UPDATED successfully.", "Update",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Refresh the list to reflect changes
+            showlist();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -246,29 +293,35 @@ namespace sellerForm
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null || dataGridView1.CurrentRow.Index < 0)
+            {
+                MessageBox.Show("Please select a product from the list first.", "Delete", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return;
+            }
+
             int itemID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+
             DialogResult result = MessageBox.Show(
-            "Are you sure you want to delete this product?",
-            "Confirm Deletion",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Warning
+                "Are you sure you want to delete this product?",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
             );
 
             if (result == DialogResult.Yes)
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (var connection = new SqlConnection(connectionString))
+                using (var command = new SqlCommand("DELETE FROM NormalProductList WHERE itemID = @itemID", connection))
                 {
-                    string query = "DELETE FROM NormalProductList WHERE itemID = @itemID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@itemID", itemID);
-                        connection.Open();
-                        command.ExecuteNonQuery();
-                    }
+                    command.Parameters.AddWithValue("@itemID", itemID);
+                    connection.Open();
+                    command.ExecuteNonQuery();
                 }
-                MessageBox.Show("Product deleted successfully. Please Refresh The List!");
+
+                MessageBox.Show("Product deleted successfully. Please refresh the list!");
+                showlist();
             }
         }
     }
-    
 }
