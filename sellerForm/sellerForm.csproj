@@ -166,29 +166,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuyerDashboard.cs">
+    <Compile Include="AddProductAuction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuyerDashboard.Designer.cs">
-      <DependentUpon>BuyerDashboard.cs</DependentUpon>
+    <Compile Include="AddProductAuction.Designer.cs">
+      <DependentUpon>AddProductAuction.cs</DependentUpon>
     </Compile>
-    <Compile Include="buyerForm.cs">
+    <Compile Include="AuctionProductList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="buyerForm.Designer.cs">
-      <DependentUpon>buyerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BuyerResetPass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuyerResetPass.Designer.cs">
-      <DependentUpon>BuyerResetPass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BuyerSignUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuyerSignUp.Designer.cs">
-      <DependentUpon>BuyerSignUp.cs</DependentUpon>
+    <Compile Include="AuctionProductList.Designer.cs">
+      <DependentUpon>AuctionProductList.cs</DependentUpon>
     </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
@@ -228,17 +216,11 @@
     <Compile Include="SignUP.Designer.cs">
       <DependentUpon>SignUP.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BuyerDashboard.resx">
-      <DependentUpon>BuyerDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="AddProductAuction.resx">
+      <DependentUpon>AddProductAuction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="buyerForm.resx">
-      <DependentUpon>buyerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuyerResetPass.resx">
-      <DependentUpon>BuyerResetPass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuyerSignUp.resx">
-      <DependentUpon>BuyerSignUp.cs</DependentUpon>
+    <EmbeddedResource Include="AuctionProductList.resx">
+      <DependentUpon>AuctionProductList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>

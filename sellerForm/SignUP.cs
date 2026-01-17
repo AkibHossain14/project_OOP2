@@ -56,7 +56,7 @@ namespace sellerForm
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
+            this.Close();
             Form f2 = new Form1();
             f2.Show();
         }
@@ -64,9 +64,9 @@ namespace sellerForm
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-
-            //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-            string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+            
+            string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+            //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
             
             string userName = txtUserName.Text.Trim();
             string phone = txtPhone.Text.Trim();
