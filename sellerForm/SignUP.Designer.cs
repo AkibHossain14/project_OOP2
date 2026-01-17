@@ -147,7 +147,7 @@
             // 
             this.button3.BackgroundImage = global::sellerForm.Properties.Resources.backButton;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(12, 3);
+            this.button3.Location = new System.Drawing.Point(12, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(72, 45);
             this.button3.TabIndex = 12;
