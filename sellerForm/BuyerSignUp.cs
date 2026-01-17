@@ -10,16 +10,26 @@ using System.Windows.Forms;
 
 namespace sellerForm
 {
-    public partial class buyerForm : Form
+    public partial class BuyerSignUp : Form
     {
-        public buyerForm()
+        public BuyerSignUp()
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void label4_Click(object sender, EventArgs e)
         {
-            //empty
+
         }
 
+        private void BuyerSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

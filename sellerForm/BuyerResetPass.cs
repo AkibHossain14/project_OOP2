@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace sellerForm
 {
-    public partial class buyerForm : Form
+    public partial class BuyerResetPass : Form
     {
-        public buyerForm()
+        public BuyerResetPass()
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //empty
-        }
-
     }
 }

@@ -304,3 +304,7 @@ C:\Users\User\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.csproj.C
 C:\Users\User\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.csproj.Up2Date
 C:\Users\User\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.exe
 C:\Users\User\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.pdb
+C:\Users\User\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.buyerForm.resources
+C:\Users\User\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.BuyerDashboard.resources
+C:\Users\User\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.BuyerResetPass.resources
+C:\Users\User\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.BuyerSignUp.resources
