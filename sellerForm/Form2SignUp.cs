@@ -13,6 +13,10 @@ namespace sellerForm
         {
             InitializeComponent();
         }
+        private void Form2SignUp_Load(object sender, EventArgs e)
+        {
+            // Optional: Leave empty
+        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
