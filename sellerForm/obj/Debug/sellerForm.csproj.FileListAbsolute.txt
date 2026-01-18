@@ -308,3 +308,7 @@ D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.csproj.CoreCompileInpu
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.csproj.Up2Date
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.exe
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.pdb
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2Dashboard.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2ResetPass.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2SignUp.resources

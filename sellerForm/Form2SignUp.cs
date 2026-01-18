@@ -16,5 +16,12 @@ namespace sellerForm
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 ds = new Form2();
+            ds.Show();
+        }
     }
 }
