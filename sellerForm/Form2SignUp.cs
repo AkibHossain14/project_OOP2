@@ -7,6 +7,8 @@ namespace sellerForm
 {
     public partial class Form2SignUp : Form
     {
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+
         public Form2SignUp()
         {
             InitializeComponent();
@@ -21,10 +23,6 @@ namespace sellerForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=buyerinfo; integrated security=SSPI";
-
             string userName = txtUserName.Text.Trim();
             string phone = txtPhone.Text.Trim();
             string email = txtEmail.Text.Trim();
@@ -105,6 +103,7 @@ namespace sellerForm
             Form2 form2 = new Form2();
             form2.Show();
         }
+        private void Form2SignUp_Load(object sender, EventArgs e){}
     }
 }
 

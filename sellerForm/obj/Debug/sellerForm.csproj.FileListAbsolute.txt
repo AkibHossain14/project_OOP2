@@ -334,3 +334,8 @@ C:\Users\User\Desktop\New folder\sellerForm\obj\Debug\sellerForm.csproj.Generate
 C:\Users\User\Desktop\New folder\sellerForm\obj\Debug\sellerForm.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\New folder\sellerForm\obj\Debug\sellerForm.exe
 C:\Users\User\Desktop\New folder\sellerForm\obj\Debug\sellerForm.pdb
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2Dashboard.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2ResetPass.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2SignUp.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.roleSelection.resources
