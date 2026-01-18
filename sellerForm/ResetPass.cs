@@ -87,5 +87,10 @@ namespace sellerForm
 
             }
         }
+
+        private void ResetPass_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
