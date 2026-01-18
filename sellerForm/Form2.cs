@@ -109,7 +109,33 @@ namespace sellerForm
                 }
             }
         }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Form2SignUp signup = new Form2SignUp();
+            signup.Show();
+        }
 
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Form2ResetPass reset = new Form2ResetPass();
+            reset.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (show.Checked)
+                txtPass.UseSystemPasswordChar = false;
+            else
+                txtPass.UseSystemPasswordChar = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
+
 
