@@ -89,6 +89,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2Dashboard";
             this.Text = "Form2Dashboard";
+            this.Load += new System.EventHandler(this.Form2Dashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

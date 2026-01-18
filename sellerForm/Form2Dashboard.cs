@@ -16,6 +16,12 @@ namespace sellerForm
         {
             InitializeComponent();
         }
+        int buyerId;
+        public Form2Dashboard(int id)
+        {
+            InitializeComponent();
+            buyerId = id;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -23,6 +29,11 @@ namespace sellerForm
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2Dashboard_Load(object sender, EventArgs e)
         {
 
         }

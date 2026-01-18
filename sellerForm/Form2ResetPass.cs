@@ -28,5 +28,10 @@ namespace sellerForm
             Form2 ds = new Form2();
             ds.Show();
         }
+
+        private void Form2ResetPass_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

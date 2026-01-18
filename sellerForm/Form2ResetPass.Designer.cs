@@ -174,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2ResetPass";
             this.Text = "Form2ResetPass";
+            this.Load += new System.EventHandler(this.Form2ResetPass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

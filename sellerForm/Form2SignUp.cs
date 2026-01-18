@@ -23,5 +23,10 @@ namespace sellerForm
             Form2 ds = new Form2();
             ds.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
