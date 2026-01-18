@@ -174,6 +174,13 @@ namespace sellerForm
             ResetPass r1 = new ResetPass();
             r1.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            roleSelection r1 = new roleSelection();
+            r1.Show();
+        }
     }
 }
 

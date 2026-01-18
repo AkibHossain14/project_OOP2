@@ -312,3 +312,4 @@ D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2.resources
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2Dashboard.resources
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2ResetPass.resources
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2SignUp.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.roleSelection.resources

@@ -234,6 +234,12 @@
     <Compile Include="ResetPass.Designer.cs">
       <DependentUpon>ResetPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="roleSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roleSelection.Designer.cs">
+      <DependentUpon>roleSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </Compile>
     <EmbeddedResource Include="ResetPass.resx">
       <DependentUpon>ResetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roleSelection.resx">
+      <DependentUpon>roleSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUP.resx">
       <DependentUpon>SignUP.cs</DependentUpon>

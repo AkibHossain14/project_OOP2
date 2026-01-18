@@ -16,5 +16,17 @@ namespace sellerForm
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            roleSelection r3 = new roleSelection();
+            r3.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

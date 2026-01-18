@@ -39,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // linkLabel2
@@ -65,11 +66,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(304, 328);
+            this.label3.Location = new System.Drawing.Point(289, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 23);
             this.label3.TabIndex = 19;
             this.label3.Text = "Don\'t have an account  ?";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // linkLabel1
             // 
@@ -149,11 +151,23 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "UserName";
             // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::sellerForm.Properties.Resources.backButton;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(12, 22);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(72, 45);
+            this.button3.TabIndex = 28;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -185,5 +199,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
     }
 }
