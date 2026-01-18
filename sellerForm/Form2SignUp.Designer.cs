@@ -203,6 +203,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2SignUp";
             this.Text = "Form2SignUp";
+            this.Load += new System.EventHandler(this.Form2SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
