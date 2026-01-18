@@ -172,11 +172,29 @@
     <Compile Include="AddProductAuction.Designer.cs">
       <DependentUpon>AddProductAuction.cs</DependentUpon>
     </Compile>
+    <Compile Include="aProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aProductList.Designer.cs">
+      <DependentUpon>aProductList.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuctionProductList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AuctionProductList.Designer.cs">
       <DependentUpon>AuctionProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionResultBuyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionResultBuyer.Designer.cs">
+      <DependentUpon>AuctionResultBuyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionResultSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionResultSeller.Designer.cs">
+      <DependentUpon>AuctionResultSeller.cs</DependentUpon>
     </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
@@ -214,11 +232,29 @@
     <Compile Include="Form2SignUp.Designer.cs">
       <DependentUpon>Form2SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewProduct.Designer.cs">
       <DependentUpon>NewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nProdectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nProdectList.Designer.cs">
+      <DependentUpon>nProdectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.cs">
+      <DependentUpon>payment.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductInfo.cs">
       <SubType>Form</SubType>
@@ -246,11 +282,26 @@
     <Compile Include="SignUP.Designer.cs">
       <DependentUpon>SignUP.cs</DependentUpon>
     </Compile>
+    <Compile Include="SoldItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoldItemList.Designer.cs">
+      <DependentUpon>SoldItemList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddProductAuction.resx">
       <DependentUpon>AddProductAuction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="aProductList.resx">
+      <DependentUpon>aProductList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuctionProductList.resx">
       <DependentUpon>AuctionProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionResultBuyer.resx">
+      <DependentUpon>AuctionResultBuyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionResultSeller.resx">
+      <DependentUpon>AuctionResultSeller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
@@ -270,8 +321,17 @@
     <EmbeddedResource Include="Form2SignUp.resx">
       <DependentUpon>Form2SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewProduct.resx">
       <DependentUpon>NewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nProdectList.resx">
+      <DependentUpon>nProdectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductInfo.resx">
       <DependentUpon>ProductInfo.cs</DependentUpon>
@@ -294,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUP.resx">
       <DependentUpon>SignUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoldItemList.resx">
+      <DependentUpon>SoldItemList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

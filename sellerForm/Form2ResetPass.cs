@@ -11,14 +11,6 @@ namespace sellerForm
         {
             InitializeComponent();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-            // Leave empty or add your code
-        }
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            // Optional: back action
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -105,9 +97,7 @@ namespace sellerForm
         {
             
         }
-        private void Form2ResetPass_Load(object sender, EventArgs e)
-        {
-        }
+        
 
         private void button1_Click_1(object sender, EventArgs e)
         {

@@ -14,6 +14,9 @@ namespace sellerForm
 {
     public partial class SignUP : Form
     {
+
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
         public SignUP()
         {
             InitializeComponent();
@@ -65,8 +68,6 @@ namespace sellerForm
         {
             this.Hide();
             
-            string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-            //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
             
             string userName = txtUserName.Text.Trim();
             string phone = txtPhone.Text.Trim();

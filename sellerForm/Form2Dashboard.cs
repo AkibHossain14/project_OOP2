@@ -30,12 +30,35 @@ namespace sellerForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            nProdectList npl = new nProdectList(buyerId);
+            npl.Show();
         }
 
         private void Form2Dashboard_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            aProductList a = new aProductList(buyerId);
+            a.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AuctionResultBuyer arb = new AuctionResultBuyer(buyerId);
+            arb.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 form3 = new Form3(buyerId);
+            form3.Show();
         }
     }
 }

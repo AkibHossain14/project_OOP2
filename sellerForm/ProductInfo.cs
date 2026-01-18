@@ -20,9 +20,8 @@ namespace sellerForm
         private bool imageChanged = false;    // true only if user selected a new image via OpenFileDialog
         private readonly int id;
 
-        // string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        private readonly string connectionString =
-            "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //private readonly string connectionString ="data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
 
         public ProductInfo(int i)
         {

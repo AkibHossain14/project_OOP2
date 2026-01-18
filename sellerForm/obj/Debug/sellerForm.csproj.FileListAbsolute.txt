@@ -339,3 +339,10 @@ C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Fo
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2ResetPass.resources
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Form2SignUp.resources
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.roleSelection.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.nProdectList.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.payment.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.aProductList.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.AuctionResultSeller.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.AuctionResultBuyer.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.SoldItemList.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Form3.resources
