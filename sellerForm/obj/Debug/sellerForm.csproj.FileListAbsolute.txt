@@ -346,3 +346,15 @@ C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Au
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.AuctionResultBuyer.resources
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.SoldItemList.resources
 C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.Form3.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.aProductList.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.AuctionResultBuyer.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.AuctionResultSeller.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.Form3.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.nProdectList.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.payment.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.SoldItemList.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.adminDashboard.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.sellerManagement.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.adminLogin.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.adminSignup.resources
+D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.buyerManagement.resources

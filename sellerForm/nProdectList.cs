@@ -16,8 +16,8 @@ namespace sellerForm
     {
         int id;
      
-        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
         public nProdectList(int id)
         {
             InitializeComponent();
@@ -118,6 +118,11 @@ namespace sellerForm
         private void button3_Click(object sender, EventArgs e)
         {
             showlist();
+        }
+
+        private void nProdectList_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

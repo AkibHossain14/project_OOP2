@@ -1,6 +1,6 @@
 ﻿namespace sellerForm
 {
-    partial class Form2SignUp
+    partial class adminSignup
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,7 @@
             // 
             // txtConfirmPass
             // 
-            this.txtConfirmPass.Location = new System.Drawing.Point(335, 208);
+            this.txtConfirmPass.Location = new System.Drawing.Point(379, 212);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(199, 22);
             this.txtConfirmPass.TabIndex = 31;
@@ -56,7 +56,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(163, 212);
+            this.label7.Location = new System.Drawing.Point(207, 216);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 20);
             this.label7.TabIndex = 30;
@@ -64,7 +64,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(335, 132);
+            this.txtEmail.Location = new System.Drawing.Point(379, 136);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(199, 22);
             this.txtEmail.TabIndex = 29;
@@ -73,7 +73,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(243, 132);
+            this.label6.Location = new System.Drawing.Point(287, 136);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 28;
@@ -83,7 +83,7 @@
             // 
             this.button3.BackgroundImage = global::sellerForm.Properties.Resources.backButton;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(8, 17);
+            this.button3.Location = new System.Drawing.Point(7, 14);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(72, 45);
             this.button3.TabIndex = 27;
@@ -93,17 +93,18 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(500, 368);
+            this.linkLabel1.Location = new System.Drawing.Point(544, 372);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(39, 16);
             this.linkLabel1.TabIndex = 26;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "log in";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(321, 368);
+            this.label5.Location = new System.Drawing.Point(365, 372);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(165, 16);
             this.label5.TabIndex = 25;
@@ -112,16 +113,17 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(465, 295);
+            this.button2.Location = new System.Drawing.Point(509, 299);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 54);
             this.button2.TabIndex = 24;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(335, 100);
+            this.txtPhone.Location = new System.Drawing.Point(379, 104);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(199, 22);
             this.txtPhone.TabIndex = 23;
@@ -130,7 +132,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(242, 100);
+            this.label4.Location = new System.Drawing.Point(286, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 22;
@@ -138,7 +140,7 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(335, 171);
+            this.txtPass.Location = new System.Drawing.Point(379, 175);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(199, 22);
             this.txtPass.TabIndex = 21;
@@ -147,7 +149,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(216, 175);
+            this.label3.Location = new System.Drawing.Point(260, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 20;
@@ -156,7 +158,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(324, 295);
+            this.button1.Location = new System.Drawing.Point(368, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 54);
             this.button1.TabIndex = 19;
@@ -166,7 +168,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(335, 63);
+            this.txtUserName.Location = new System.Drawing.Point(379, 67);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(199, 22);
             this.txtUserName.TabIndex = 18;
@@ -175,13 +177,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(217, 62);
+            this.label1.Location = new System.Drawing.Point(261, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "UserName";
             // 
-            // Form2SignUp
+            // adminSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,9 +203,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
-            this.Name = "Form2SignUp";
-            this.Text = "Form2SignUp";
-            this.Load += new System.EventHandler(this.Form2SignUp_Load);
+            this.Name = "adminSignup";
+            this.Text = "adminSignup";
             this.ResumeLayout(false);
             this.PerformLayout();
 

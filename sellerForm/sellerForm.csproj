@@ -172,6 +172,24 @@
     <Compile Include="AddProductAuction.Designer.cs">
       <DependentUpon>AddProductAuction.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminDashboard.Designer.cs">
+      <DependentUpon>adminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminLogin.Designer.cs">
+      <DependentUpon>adminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminSignup.Designer.cs">
+      <DependentUpon>adminSignup.cs</DependentUpon>
+    </Compile>
     <Compile Include="aProductList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +213,12 @@
     </Compile>
     <Compile Include="AuctionResultSeller.Designer.cs">
       <DependentUpon>AuctionResultSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buyerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buyerManagement.Designer.cs">
+      <DependentUpon>buyerManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
@@ -276,6 +300,12 @@
     <Compile Include="roleSelection.Designer.cs">
       <DependentUpon>roleSelection.cs</DependentUpon>
     </Compile>
+    <Compile Include="sellerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sellerManagement.Designer.cs">
+      <DependentUpon>sellerManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +321,15 @@
     <EmbeddedResource Include="AddProductAuction.resx">
       <DependentUpon>AddProductAuction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adminDashboard.resx">
+      <DependentUpon>adminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminLogin.resx">
+      <DependentUpon>adminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminSignup.resx">
+      <DependentUpon>adminSignup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="aProductList.resx">
       <DependentUpon>aProductList.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AuctionResultSeller.resx">
       <DependentUpon>AuctionResultSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buyerManagement.resx">
+      <DependentUpon>buyerManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
@@ -351,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="roleSelection.resx">
       <DependentUpon>roleSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sellerManagement.resx">
+      <DependentUpon>sellerManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUP.resx">
       <DependentUpon>SignUP.cs</DependentUpon>
