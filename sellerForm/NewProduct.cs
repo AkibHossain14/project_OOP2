@@ -14,12 +14,13 @@ namespace sellerForm
     public partial class NewProduct : Form
     {
         private readonly int id;
+        string username;
         byte[] imageData;
 
-        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+       // string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
 
-        public NewProduct(int i)
+        public NewProduct(int i, string username)
         {
             InitializeComponent();
             id = i;
@@ -37,6 +38,7 @@ namespace sellerForm
             categories[10] = "Vehicles & Accessories";
             categories[11] = "Toys & Baby Products";
             comboBox1.DataSource = categories;
+            this.username = username;
         }
 
         private void NewProduct_Load(object sender, EventArgs e)
@@ -60,8 +62,8 @@ namespace sellerForm
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            dashboard ds = new dashboard(id);
-            ds.Show();
+            dashboard d1 = new dashboard(id, username);
+            d1.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -164,69 +166,82 @@ namespace sellerForm
             }
             MessageBox.Show("Item added successfully.");
             this.Close();
-            dashboard sellerDashBoard = new dashboard(id);
-            sellerDashBoard.Show();
+            dashboard d1 = new dashboard(id, username);
+            d1.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to exit the application?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
 
 
-            /* try
+        /* try
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                using (SqlCommand command = new SqlCommand(query, connection))
+
+
+
+                command.Parameters.AddWithValue("@sellerID", sellerId);
+                command.Parameters.AddWithValue("@itername", itemName);   // ← use itername here
+                command.Parameters.AddWithValue("@price", price);
+                command.Parameters.AddWithValue("@description", description);
+                command.Parameters.AddWithValue("@category", category);
+                command.Parameters.AddWithValue("@brand", brand);
+
+
+
+
+
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
                 {
+                    MessageBox.Show("Product saved successfully!",
+                        "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-
-                    command.Parameters.AddWithValue("@sellerID", sellerId);
-                    command.Parameters.AddWithValue("@itername", itemName);   // ← use itername here
-                    command.Parameters.AddWithValue("@price", price);
-                    command.Parameters.AddWithValue("@description", description);
-                    command.Parameters.AddWithValue("@category", category);
-                    command.Parameters.AddWithValue("@brand", brand);
-
-
-
-
-
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Product saved successfully!",
-                            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        
-                        txtItemName.Clear();
-                        txtPrice.Clear();
-                        txtDiscription.Clear();
-                        txtcategory.Clear();
-                        txtBrand.Clear();
-                        selleridTXT.Text = sellerId.ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to save the product. Please try again.",
-                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    txtItemName.Clear();
+                    txtPrice.Clear();
+                    txtDiscription.Clear();
+                    txtcategory.Clear();
+                    txtBrand.Clear();
+                    selleridTXT.Text = sellerId.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to save the product. Please try again.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show($"Database error: {ex.Message}",
-                    "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show($"Operation error: {ex.Message}",
-                    "Operation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Unexpected error: {ex.Message}",
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+        }
+        catch (SqlException ex)
+        {
+            MessageBox.Show($"Database error: {ex.Message}",
+                "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        catch (InvalidOperationException ex)
+        {
+            MessageBox.Show($"Operation error: {ex.Message}",
+                "Operation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Unexpected error: {ex.Message}",
+                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }*/
     }
 
         

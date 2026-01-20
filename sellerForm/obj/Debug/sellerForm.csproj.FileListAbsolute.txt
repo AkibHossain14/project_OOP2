@@ -358,3 +358,9 @@ D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.sellerManagement.resou
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.adminLogin.resources
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.adminSignup.resources
 D:\AKIB demo\project_OOP2\sellerForm\obj\Debug\sellerForm.buyerManagement.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.adminDashboard.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.adminLogin.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.adminSignup.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.buyerManagement.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.sellerManagement.resources
+C:\Users\BoTWitHRTX\Source\Repos\project_OOP2\sellerForm\obj\Debug\sellerForm.adminResetPass.resources

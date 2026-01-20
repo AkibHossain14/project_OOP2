@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace sellerForm
 {
-    public partial class ResetPass : Form
+    public partial class adminResetPass : Form
     {
-        public ResetPass()
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        public adminResetPass()
         {
             InitializeComponent();
         }
@@ -23,9 +25,6 @@ namespace sellerForm
             string email = textBox2.Text;
             string pass = textBox3.Text;
             string conPass = textBox4.Text;
-
-            string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-            //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
 
             if (pass != conPass)
             {
@@ -46,9 +45,9 @@ namespace sellerForm
                 return;
             }
 
-            string query1 = "UPDATE Seller SET password = @Password WHERE username = @Username AND email = @Email";
+            string query1 = "UPDATE Admin SET password = @Password WHERE username = @Username AND email = @Email";
 
-            string query2 = "SELECT COUNT(*) FROM Seller WHERE username = @Username AND email = @Email";
+            string query2 = "SELECT COUNT(*) FROM Admin WHERE username = @Username AND email = @Email";
 
             using (var connection = new System.Data.SqlClient.SqlConnection(connectionString))
             {
@@ -74,8 +73,8 @@ namespace sellerForm
                     {
                         MessageBox.Show("Password reset successfully.");
                         this.Hide();
-                        Form1 f1 = new Form1();
-                        f1.Show();
+                        adminLogin al1 = new adminLogin();
+                        al1.Show();
                         this.Close();
                     }
                     else
@@ -86,27 +85,23 @@ namespace sellerForm
 
 
             }
-        }
-
-        private void ResetPass_Load(object sender, EventArgs e)
-        {
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 f1 = new Form1();
-            f1.Show();
+            adminLogin al1 = new adminLogin();
+            al1.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-            "Are you sure you want to exit the application?",
-            "Confirm Exit",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
+           "Are you sure you want to exit the application?",
+           "Confirm Exit",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 Application.Exit();

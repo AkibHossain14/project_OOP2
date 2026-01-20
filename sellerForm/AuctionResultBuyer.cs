@@ -15,15 +15,17 @@ namespace sellerForm
     public partial class AuctionResultBuyer : Form
     {
         int buyerID;
+        string username;
 
         string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
         //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
-        public AuctionResultBuyer(int buyerID)
+        public AuctionResultBuyer(int buyerID, string username)
         {
             InitializeComponent();
             this.buyerID = buyerID;
             showList();
             panel1.Hide();
+            this.username = username;
         }
 
         public void showList()
@@ -70,6 +72,31 @@ namespace sellerForm
 
             payment p1 = new payment(bidAmount, itemID, itemName, buyerID, sellerID,true);
             p1.Show();
+            showList();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2Dashboard f2 = new Form2Dashboard(buyerID,username);
+            f2.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+           "Are you sure you want to exit the application?",
+           "Confirm Exit",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
             showList();
         }
     }

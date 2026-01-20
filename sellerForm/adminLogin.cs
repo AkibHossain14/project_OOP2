@@ -14,8 +14,8 @@ namespace sellerForm
 {
     public partial class adminLogin : Form
     {
-        // string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
         public adminLogin()
         {
             InitializeComponent();
@@ -121,7 +121,7 @@ namespace sellerForm
                                 int adminId= Convert.ToInt32(result);
 
                                 this.Hide();
-                                var dash = new adminDashboard(); 
+                                var dash = new adminDashboard(adminId,username); 
                                 dash.Show();
                             }
                             else
@@ -149,6 +149,33 @@ namespace sellerForm
         {
             this.Hide();
             adminSignup f2 = new adminSignup();
+            f2.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            roleSelection r1 = new roleSelection();
+            r1.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+           "Are you sure you want to exit the application?",
+           "Confirm Exit",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            adminResetPass f2 = new adminResetPass();
             f2.Show();
         }
     }

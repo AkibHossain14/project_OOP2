@@ -7,8 +7,8 @@ namespace sellerForm
 {
     public partial class Form2SignUp : Form
     {
-        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
 
 
         public Form2SignUp()
@@ -106,6 +106,19 @@ namespace sellerForm
             form2.Show();
         }
         private void Form2SignUp_Load(object sender, EventArgs e){}
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+           "Are you sure you want to exit the application?",
+           "Confirm Exit",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
 

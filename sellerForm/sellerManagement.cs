@@ -13,12 +13,17 @@ namespace sellerForm
 {
     public partial class sellerManagement : Form
     {
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        // private readonly string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
 
-        private readonly string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
-
-        public sellerManagement()
+        int id;
+        string username;
+        public sellerManagement(int id, string username)
         {
             InitializeComponent();
+            panel1.Visible = false;
+            this.id = id;
+            this.username = username;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -33,7 +38,7 @@ namespace sellerForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            panel1.Visible = true;
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM dbo.Seller";
@@ -49,7 +54,7 @@ namespace sellerForm
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            panel1.Visible = false;
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM dbo.NormalProductList";
@@ -65,7 +70,7 @@ namespace sellerForm
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            panel1.Visible = false;
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM dbo.AuctionProductList";
@@ -188,6 +193,26 @@ namespace sellerForm
         private void sellerManagement_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+            adminDashboard ad = new adminDashboard(id,username);
+            ad.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+           "Are you sure you want to exit the application?",
+           "Confirm Exit",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

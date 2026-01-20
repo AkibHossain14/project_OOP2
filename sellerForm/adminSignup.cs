@@ -13,8 +13,8 @@ namespace sellerForm
 {
     public partial class adminSignup : Form
     {
-        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
         public adminSignup()
         {
             InitializeComponent();
@@ -23,8 +23,8 @@ namespace sellerForm
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            roleSelection r1 = new roleSelection();
-            r1.Show();
+            adminLogin f2 = new adminLogin();
+            f2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace sellerForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
 
 
             string userName = txtUserName.Text.Trim();
@@ -113,6 +113,19 @@ namespace sellerForm
                     MessageBox.Show("Failed to create the profile. Please try again.",
                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+           "Are you sure you want to exit the application?",
+           "Confirm Exit",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

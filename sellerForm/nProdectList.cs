@@ -15,15 +15,17 @@ namespace sellerForm
     public partial class nProdectList : Form
     {
         int id;
-     
-        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
-        public nProdectList(int id)
+        string username;
+
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        public nProdectList(int id, string username)
         {
             InitializeComponent();
-            panel1.Hide();  
+            panel1.Hide();
             showlist();
             this.id = id;
+            this.username = username;
         }
         public void showlist()
         {
@@ -124,5 +126,26 @@ namespace sellerForm
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2Dashboard form2 = new Form2Dashboard(id, username);
+            form2.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+         "Are you sure you want to exit the application?",
+         "Confirm Exit",
+         MessageBoxButtons.YesNo,
+         MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
+    
 }

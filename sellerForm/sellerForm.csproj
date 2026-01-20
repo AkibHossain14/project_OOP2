@@ -184,6 +184,12 @@
     <Compile Include="adminLogin.Designer.cs">
       <DependentUpon>adminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminResetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminResetPass.Designer.cs">
+      <DependentUpon>adminResetPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminSignup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminLogin.resx">
       <DependentUpon>adminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminResetPass.resx">
+      <DependentUpon>adminResetPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminSignup.resx">
       <DependentUpon>adminSignup.cs</DependentUpon>

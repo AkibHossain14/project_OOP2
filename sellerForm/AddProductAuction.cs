@@ -14,13 +14,14 @@ namespace sellerForm
     public partial class AddProductAuction : Form
     {
         int id;
+        string username;
         byte[] imageData;
 
         string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
         //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
 
 
-        public AddProductAuction(int id)
+        public AddProductAuction(int id, string username)
         {
             InitializeComponent();
             this.id = id;
@@ -36,6 +37,9 @@ namespace sellerForm
             categories[8] = "Sports & Outdoor";
             categories[9] = "Vehicles & Accessories";
             comboBox1.DataSource = categories;
+            this.username = username;
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now.AddDays(1);
         }
         public AddProductAuction()
         {
@@ -105,8 +109,8 @@ namespace sellerForm
             }
             MessageBox.Show("Product added to auction successfully.");
             this.Close();
-            dashboard sellerDashBoard = new dashboard(id);
-            sellerDashBoard.Show();
+            dashboard d1 = new dashboard(id, username);
+            d1.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -137,6 +141,26 @@ namespace sellerForm
         private void AddProductAuction_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            dashboard d1 = new dashboard(id, username);
+            d1.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to exit the application?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -16,8 +16,8 @@ namespace sellerForm
 
     public partial class Form1 : Form
     {
-       // string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-       string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+       string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+       //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
         public Form1()
         {
             InitializeComponent();
@@ -103,7 +103,7 @@ namespace sellerForm
                                 int sellerId = Convert.ToInt32(result);
 
                                 this.Hide();
-                                var dash = new dashboard(sellerId); // pass INT
+                                var dash = new dashboard(sellerId,username); // pass INT
                                 dash.Show();
                             }
                             else
@@ -181,6 +181,19 @@ namespace sellerForm
             this.Hide();
             roleSelection r1 = new roleSelection();
             r1.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to exit the application?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

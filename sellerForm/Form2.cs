@@ -13,8 +13,8 @@ namespace sellerForm
 {
     public partial class Form2 : Form
     {
-       // string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
         public Form2()
         {
             InitializeComponent();
@@ -95,7 +95,7 @@ namespace sellerForm
                             int buyerId = Convert.ToInt32(idCmd.ExecuteScalar());
 
                             this.Hide();
-                            Form2Dashboard dash = new Form2Dashboard(buyerId);
+                            Form2Dashboard dash = new Form2Dashboard(buyerId,username);
                             dash.Show();
                         }
                     }
@@ -160,6 +160,24 @@ namespace sellerForm
 
                 txtPass.UseSystemPasswordChar = true;
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to exit the application?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

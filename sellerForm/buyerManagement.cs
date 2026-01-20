@@ -13,11 +13,16 @@ namespace sellerForm
 {
     public partial class buyerManagement : Form
     {
-        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        public buyerManagement()
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+
+        int id;
+        string username;
+        public buyerManagement(int id, string username)
         {
             InitializeComponent();
+            this.id = id;
+            this.username = username;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -131,8 +136,25 @@ MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-
-
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            adminDashboard ad = new adminDashboard(id,username);
+            ad.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+          "Are you sure you want to exit the application?",
+          "Confirm Exit",
+          MessageBoxButtons.YesNo,
+          MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+    }
     }
 

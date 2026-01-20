@@ -17,7 +17,8 @@ namespace sellerForm
         //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
         
         int buyerID;
-        public Form3(int buyerID)
+        string username;
+        public Form3(int buyerID, string username)
         {
             InitializeComponent();
             this.buyerID = buyerID;
@@ -34,6 +35,7 @@ namespace sellerForm
                 }
             }
             showList();
+            this.username = username;
         }
 
         public void showList()
@@ -57,8 +59,28 @@ namespace sellerForm
         private void button1_Click(object sender, EventArgs e)
         {
          this.Close();
-         Form2Dashboard form2 = new Form2Dashboard(buyerID);
+         Form2Dashboard form2 = new Form2Dashboard(buyerID, username);
          form2.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2Dashboard form2 = new Form2Dashboard(buyerID, username);
+            form2.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+           "Are you sure you want to exit the application?",
+           "Confirm Exit",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

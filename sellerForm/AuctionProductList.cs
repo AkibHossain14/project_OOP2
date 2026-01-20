@@ -16,10 +16,11 @@ namespace sellerForm
     {
         byte[] newImageData;
         int id;
-        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        string username;
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
 
-        public AuctionProductList(int id)
+        public AuctionProductList(int id, string username)
         {
             InitializeComponent();
             this.id = id;
@@ -36,6 +37,7 @@ namespace sellerForm
             categories[9] = "Vehicles & Accessories";
             comboBox1.DataSource = categories;
             showList();
+            this.username = username;
         }
 
         public void showList()
@@ -233,6 +235,26 @@ namespace sellerForm
         private void AuctionProductList_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            dashboard d1 = new dashboard(id,username);
+            d1.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to exit the application?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

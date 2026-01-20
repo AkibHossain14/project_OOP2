@@ -19,11 +19,12 @@ namespace sellerForm
         private byte[] newImageData;          // holds current image (from DB or newly selected)
         private bool imageChanged = false;    // true only if user selected a new image via OpenFileDialog
         private readonly int id;
+        string username;
 
-        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        private readonly string connectionString ="data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //private readonly string connectionString ="data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
 
-        public ProductInfo(int i)
+        public ProductInfo(int i, string username)
         {
             id = i;
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace sellerForm
             comboBox1.DataSource = categories;
 
             showlist();
+            this.username = username;
         }
 
         public void showlist()
@@ -72,7 +74,7 @@ namespace sellerForm
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            dashboard d1 = new dashboard(id);
+            dashboard d1 = new dashboard(id, username);
             d1.Show();
         }
 
@@ -326,6 +328,19 @@ namespace sellerForm
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to exit the application?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -66,7 +66,7 @@ namespace sellerForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             
             
             string userName = txtUserName.Text.Trim();
@@ -129,7 +129,7 @@ namespace sellerForm
                     MessageBox.Show("Profile created successfully!",
                         "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    this.Hide();
+                    this.Close();
                     Form1 f1 = new Form1();
                     f1.Show();
                 }
@@ -164,6 +164,19 @@ namespace sellerForm
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to exit the application?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

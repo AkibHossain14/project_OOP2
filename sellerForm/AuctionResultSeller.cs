@@ -14,15 +14,17 @@ namespace sellerForm
     public partial class AuctionResultSeller : Form
     {
         int sellerID;
+        string username;
 
         string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
         //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerInfo; integrated security=SSPI";
-        public AuctionResultSeller(int sellerID)
+        public AuctionResultSeller(int sellerID, string username)
         {
             InitializeComponent();
             this.sellerID = sellerID;
             showList();
             panel1.Hide();
+            this.username = username;
         }
 
         public void showList()
@@ -118,9 +120,40 @@ namespace sellerForm
                     command.ExecuteNonQuery();
                 }
             }
+            string deleteAuctionQuery = "DELETE FROM AuctionProductList WHERE auctionID = @auctionID";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(deleteAuctionQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@auctionID", auctionID);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
             MessageBox.Show("Auction Winner Has Been Chossen Successfully!");
             panel1.Hide();
             showList();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            dashboard d1 = new dashboard(sellerID,username);
+            d1.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "Are you sure you want to exit the application?",
+            "Confirm Exit",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
+    
 }

@@ -5,8 +5,8 @@ namespace sellerForm
 {
     public partial class Form2ResetPass : Form
     {
-        //string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
-        string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-CTAQMQQ\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
+        //string connectionString = "data source=LAPTOP-F7UNN87C\\SQLEXPRESS; database=sellerinfo; integrated security=SSPI";
 
 
         public Form2ResetPass()
@@ -97,7 +97,9 @@ namespace sellerForm
         }
         private void backButton_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+            Form f2 = new Form2();
+            f2.Show();
         }
         
 
@@ -170,6 +172,19 @@ namespace sellerForm
                         MessageBox.Show("Password reset failed. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+          "Are you sure you want to exit the application?",
+          "Confirm Exit",
+          MessageBoxButtons.YesNo,
+          MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }
